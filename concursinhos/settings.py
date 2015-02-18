@@ -124,8 +124,8 @@ STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 #Para banco de dados heroku
 import dj_database_url
-if os.getcwd() == "/app":
-    DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
+#if os.getcwd() == "/app":
+DATABASES = {'default': dj_database_url.config()}
 
 TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 
