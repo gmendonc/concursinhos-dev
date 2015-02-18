@@ -1,0 +1,1 @@
+web: gunicorn concursinhos.wsgi --log-file -
