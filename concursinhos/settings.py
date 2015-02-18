@@ -125,8 +125,8 @@ STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 #Para banco de dados heroku
 import dj_database_url
 #if os.getcwd() == "/app":
-#DATABASES = {'default': dj_database_url.config()}
-DATABASES['default'] =  dj_database_url.config()
+DATABASES = {'default': dj_database_url.config()}
+#DATABASES['default'] =  dj_database_url.config()
 
 TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 
@@ -135,11 +135,11 @@ TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 #DATABASES['default'] =  dj_database_url.config()
 
 # Enable Connection Pooling
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql_psycopg2",
-    }
-}
+#DATABASES = {
+#    "default": {
+#        "ENGINE": "django.db.backends.postgresql_psycopg2",
+#    }
+#}
 
 # try to load local_settings.py if it exists
 try:
